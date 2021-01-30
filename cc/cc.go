@@ -1814,6 +1814,23 @@ func (c *Module) DepsMutator(actx android.BottomUpMutatorContext) {
 				deps.RuntimeLibs[idx] = rewriteVendorLibs(lib)
 			}
 		}
+
+		rewriteHeaderLibs := func(list []string) (newHeaderLibs []string) {
+			newHeaderLibs = []string{}
+			for _, entry := range list {
+				// Replace generated_kernel_headers with device_kernel_headers
+				// when not building inline
+				if entry == "generated_kernel_headers" {
+					if (ctx.Config().Getenv("INLINE_KENREL_BUILDING") != "true") {
+						newHeaderLibs = append(newHeaderLibs, "device_kernel_headers")
+					}
+				} else {
+					newHeaderLibs = append(newHeaderLibs, entry)
+				}
+			}
+			return newHeaderLibs
+		}
+		deps.HeaderLibs = rewriteHeaderLibs(deps.HeaderLibs)
 	}
 
 	buildStubs := false
