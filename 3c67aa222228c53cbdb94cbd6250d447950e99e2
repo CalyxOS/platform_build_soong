@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e210919e_6ece3aae",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-03-25T10:04:46Z",
+      "side": 1,
+      "message": "Now that we\u0027ve merged oneplus, need this to fix build.\n\nOk for now, can do Revert Revert whenever we setup prebuilts for these new devices.",
+      "revId": "3c67aa222228c53cbdb94cbd6250d447950e99e2",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
