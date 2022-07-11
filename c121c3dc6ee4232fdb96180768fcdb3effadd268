@@ -16,6 +16,23 @@
       "message": "Picked from: https://review.lineageos.org/c/LineageOS/android_build_soong/+/327111",
       "revId": "c121c3dc6ee4232fdb96180768fcdb3effadd268",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ce18e214_51d3bd8a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-07-11T12:23:24Z",
+      "side": 1,
+      "message": "Just put it on a different partition?\n\nBind mount might work too",
+      "revId": "c121c3dc6ee4232fdb96180768fcdb3effadd268",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
