@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e2bc2609_aa81956d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-08-31T16:09:02Z",
+      "side": 1,
+      "message": "This wasn\u0027t squashed previously in case we wanted to revert it later. Since OnePlus devices are currently not supported, maybe we want to do that?",
+      "revId": "6c3bf45854f8a0ab3fff9b9d62fdbaa2eead0e92",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
