@@ -16,6 +16,24 @@
       "message": "This wasn\u0027t squashed previously in case we wanted to revert it later. Since OnePlus devices are currently not supported, maybe we want to do that?",
       "revId": "6c3bf45854f8a0ab3fff9b9d62fdbaa2eead0e92",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7fce36d9_3bb80990",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-09-01T22:33:34Z",
+      "side": 1,
+      "message": "Not sure if other OEMs will also need this. Also, some of these commits are from Lineage.",
+      "parentUuid": "e2bc2609_aa81956d",
+      "revId": "6c3bf45854f8a0ab3fff9b9d62fdbaa2eead0e92",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
