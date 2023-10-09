@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b9d5112c_669c70e4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-10-09T23:22:32Z",
+      "side": 1,
+      "message": "Minor change here to make it work in 14, check PS1...PS2",
+      "revId": "cd84ae36762cee4c649f2c420396ab099eb16e2a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
