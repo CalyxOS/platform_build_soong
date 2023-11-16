@@ -34,6 +34,24 @@
       "parentUuid": "9c840b43_90d1b45f",
       "revId": "705b26cee2925a094a97c86c2178914eb3c2e6f4",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0cbda8eb_04748b5a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2023-11-16T11:34:52Z",
+      "side": 1,
+      "message": "Inline kernel build devices need this for bp targets (external/tinycompress for example)",
+      "parentUuid": "682c0f9c_bf4072b2",
+      "revId": "705b26cee2925a094a97c86c2178914eb3c2e6f4",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
