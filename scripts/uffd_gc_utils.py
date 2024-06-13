@@ -41,6 +41,13 @@ def should_enable_uffd_gc_impl(kernel_version):
       if version < 5:
         # Old kernel.
         return False
+      elif (version == 5 and patch_level == 4):
+        if 'qgki' in kernel_version:
+          # 5.4 QGKI kernel is based on android11-5.4. It does not have backports.
+          return False
+        else:
+          # Non-QGKI 5.4 kernel. It may have backports.
+          raise exit_with_error(kernel_version)
       elif (version == 5 and patch_level >= 7) or version >= 6:
         # New non-GKI kernel. 5.7 supports MREMAP_DONTUNMAP without the need for
         # backports.
