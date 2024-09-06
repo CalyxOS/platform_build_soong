@@ -34,7 +34,8 @@ var androidmk_denylist []string = []string{
 	"libcore/",
 	"libnativehelper/",
 	"pdk/",
-	"prebuilts/",
+	// Add back prebuilts/ once chromium and fdroid are migrated
+	//"prebuilts/",
 	"sdk/",
 	"test/",
 	"trusty/",
