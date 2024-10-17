@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "40111f3c_922a7207",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-10-17T17:32:42Z",
+      "side": 1,
+      "message": "chromium is up on gerrit, and should be fine\n\nfdroid is too but it needed a path change which will cause other issues, will figure out later, preferably before QPR1/24Q4",
+      "revId": "97e5cd3700df683c18d6c8ab4d7535ce75910ef6",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
