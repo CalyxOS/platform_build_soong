@@ -215,6 +215,10 @@ func GetSystemServerDexLocation(ctx android.PathContext, global *GlobalConfig, l
 		return fmt.Sprintf("/system_ext/framework/%s.jar", lib)
 	}
 
+	if strings.Contains(lib, "felix-services") || strings.Contains(lib, "comet-services") {
+		return fmt.Sprintf("/system_ext/framework/%s.jar", strings.TrimPrefix(lib, "prebuilt_"))
+	}
+
 	return fmt.Sprintf("/system/framework/%s.jar", lib)
 }
 
