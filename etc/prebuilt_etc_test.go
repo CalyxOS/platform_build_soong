@@ -568,6 +568,40 @@ func TestPrebuiltDSPDirPath(t *testing.T) {
 	}
 }
 
+func TestPrebuiltQcrildbDirPath(t *testing.T) {
+	targetPath := "out/soong/target/product/test_device"
+	tests := []struct {
+		description  string
+		config       string
+		expectedPath string
+	}{{
+		description: "prebuilt: system qcrildb",
+		config: `
+			prebuilt_qcrildb {
+				name: "foo.conf",
+				src: "foo.conf",
+			}`,
+		expectedPath: filepath.Join(targetPath, "system/radio/qcril_database"),
+	}, {
+		description: "prebuilt: vendor qcrildb",
+		config: `
+			prebuilt_qcrildb {
+				name: "foo.conf",
+				src: "foo.conf",
+				soc_specific: true,
+				sub_dir: "sub_dir",
+			}`,
+		expectedPath: filepath.Join(targetPath, "vendor/radio/qcril_database/sub_dir"),
+	}}
+	for _, tt := range tests {
+		t.Run(tt.description, func(t *testing.T) {
+			result := prepareForPrebuiltEtcTest.RunTestWithBp(t, tt.config)
+			p := result.Module("foo.conf", "android_arm64_armv8-a").(*PrebuiltEtc)
+			android.AssertPathRelativeToTopEquals(t, "install dir", tt.expectedPath, p.installDirPaths[0])
+		})
+	}
+}
+
 func TestPrebuiltRFSADirPath(t *testing.T) {
 	targetPath := "out/soong/target/product/test_device"
 	tests := []struct {

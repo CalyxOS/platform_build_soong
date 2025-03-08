@@ -211,6 +211,7 @@ var (
 		"optee":               etc.PrebuiltOpteeFactory,
 		"overlay":             etc.PrebuiltOverlayFactory,
 		"priv-app":            etc.PrebuiltPrivAppFactory,
+		"radio/qcril_database": etc.PrebuiltQcrildbFactory,
 		"sbin":                etc.PrebuiltSbinFactory,
 		"system":              etc.PrebuiltSystemFactory,
 		"res":                 etc.PrebuiltResFactory,

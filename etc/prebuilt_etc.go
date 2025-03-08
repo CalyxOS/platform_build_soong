@@ -72,6 +72,7 @@ func RegisterPrebuiltEtcBuildComponents(ctx android.RegistrationContext) {
 	ctx.RegisterModuleType("prebuilt_bin", PrebuiltBinaryFactory)
 	ctx.RegisterModuleType("prebuilt_wallpaper", PrebuiltWallpaperFactory)
 	ctx.RegisterModuleType("prebuilt_priv_app", PrebuiltPrivAppFactory)
+	ctx.RegisterModuleType("prebuilt_qcrildb", PrebuiltQcrildbFactory)
 	ctx.RegisterModuleType("prebuilt_rfs", PrebuiltRfsFactory)
 	ctx.RegisterModuleType("prebuilt_framework", PrebuiltFrameworkFactory)
 	ctx.RegisterModuleType("prebuilt_res", PrebuiltResFactory)
@@ -883,6 +884,16 @@ func PrebuiltWallpaperFactory() android.Module {
 func PrebuiltPrivAppFactory() android.Module {
 	module := &PrebuiltEtc{}
 	InitPrebuiltEtcModule(module, "priv-app")
+	// This module is device-only
+	android.InitAndroidArchModule(module, android.DeviceSupported, android.MultilibCommon)
+	android.InitDefaultableModule(module)
+	return module
+}
+
+// prebuilt_qcrildb installs files in <partition>/radio/qcril_database directory.
+func PrebuiltQcrildbFactory() android.Module {
+	module := &PrebuiltEtc{}
+	InitPrebuiltEtcModule(module, "radio/qcril_database")
 	// This module is device-only
 	android.InitAndroidArchModule(module, android.DeviceSupported, android.MultilibCommon)
 	android.InitDefaultableModule(module)
