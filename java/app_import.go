@@ -134,6 +134,9 @@ type AndroidAppImportProperties struct {
 	// need to either specify a specific certificate or be presigned.
 	Default_dev_cert *bool
 
+	// Specifies that this app should be installed to the fdroid directory.
+	Fdroid *bool
+
 	// Specifies that this app should be installed to the priv-app directory,
 	// where the system will grant it additional privileges not available to
 	// normal apps.
@@ -427,7 +430,9 @@ func (a *AndroidAppImport) generateAndroidBuildActions(ctx android.ModuleContext
 	var pathFragments []string
 	relInstallPath := String(a.properties.Relative_install_path)
 
-	if Bool(a.properties.Privileged) {
+	if Bool(a.properties.Fdroid) {
+		pathFragments = []string{"fdroid", relInstallPath}
+	} else if Bool(a.properties.Privileged) {
 		pathFragments = []string{"priv-app", relInstallPath, a.BaseModuleName()}
 	} else if ctx.InstallInTestcases() {
 		pathFragments = []string{relInstallPath, a.BaseModuleName(), ctx.DeviceConfig().DeviceArch()}
