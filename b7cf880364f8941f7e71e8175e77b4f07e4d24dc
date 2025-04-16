@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c63135ee_3cdf31e2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2025-04-16T18:59:47Z",
+      "side": 1,
+      "message": "Put it in the commit message too",
+      "revId": "b7cf880364f8941f7e71e8175e77b4f07e4d24dc",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
