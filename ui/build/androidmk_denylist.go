@@ -122,6 +122,7 @@ var external_androidmks []string = []string{
 	// wpa_supplicant_8 has been converted to Android.bp and Android.mk files are kept for troubleshooting.
 	"external/wpa_supplicant_8/",
 	// Empty Android.mk in package's top directory
+	"external/google/talkback/",
 	"external/proguard/",
 	"external/swig/",
 	"toolchain/",
