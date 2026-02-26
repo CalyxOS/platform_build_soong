@@ -220,7 +220,9 @@ func FindSources(ctx Context, config Config, f *finder.Finder) {
 	otatools_cert_files := f.FindMatching("build/make/target/product/security", findOtaToolsCertFiles)
 	otatools_cert_files = append(otatools_cert_files, f.FindMatching("device", findOtaToolsCertFiles)...)
 	otatools_cert_files = append(otatools_cert_files, f.FindMatching("external/avb/test/data", findOtaToolsCertFiles)...)
+	otatools_cert_files = append(otatools_cert_files, f.FindMatching("external/calyx", findOtaToolsCertFiles)...)
 	otatools_cert_files = append(otatools_cert_files, f.FindMatching("packages/modules", findOtaToolsCertFiles)...)
+	otatools_cert_files = append(otatools_cert_files, f.FindMatching("prebuilts/calyx", findOtaToolsCertFiles)...)
 	otatools_cert_files = append(otatools_cert_files, f.FindMatching("vendor", findOtaToolsCertFiles)...)
 	err = dumpListToFile(ctx, config, otatools_cert_files, filepath.Join(dumpDir, "OtaToolsCertFiles.list"))
 	if err != nil {
